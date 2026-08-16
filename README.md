@@ -1,106 +1,76 @@
-# Projeto PyQt6 - Contador Simples
+# PyQt6 Project - Simple Counter
 
-Um exemplo didático de aplicação com PyQt6, demonstrando a estrutura adequada de um projeto gráfico.
+A simple educational PyQt6 application demonstrating the proper structure of a graphical application project.
 
-## 📁 Estrutura do Projeto
+## Project Structure
 
-```
+```text
 pyqt6_app/
-├── main.py                 # Ponto de entrada da aplicação
-├── requirements.txt        # Dependências do projeto
-├── README.md              # Este arquivo
-└── app/                   # Pacote principal
+├── main.py                 # Application entry point
+├── requirements.txt        # Project dependencies
+├── README.md               # This file
+└── app/                    # Main package
     ├── __init__.py
-    ├── ui/                # Interface Gráfica (View)
+    ├── ui/                 # Graphical User Interface (View)
     │   ├── __init__.py
-    │   └── main_window.py # Janela principal
-    ├── logic/             # Lógica da Aplicação (Model)
+    │   └── main_window.py  # Main window
+    ├── logic/              # Application Logic (Model)
     │   ├── __init__.py
-    │   └── counter.py    # Classe do contador
-    └── resources/         # Recursos (ícones, imagens, etc)
+    │   └── counter.py      # Counter class
+    └── resources/          # Resources (icons, images, etc.)
 ```
 
-## 🎯 Conceitos Implementados
+## Concepts Implemented
 
-### 1. **Arquitetura MVC** (Modelo-Visão-Controlador)
-   - **Model** (`app/logic/counter.py`): Lógica de negócio
-   - **View** (`app/ui/main_window.py`): Interface gráfica
-   - **Controller**: Conexões entre sinais e slots
+### 1. **MVC Architecture** (Model-View-Controller)
 
-### 2. **Separação de Responsabilidades**
-   - Lógica separada da interface
-   - Fácil de testar e manter
-   - Reutilizável em diferentes UIs
+* **Model** (`app/logic/counter.py`): Business logic
+* **View** (`app/ui/main_window.py`): Graphical interface
+* **Controller**: Connections between signals and slots
 
-### 3. **Padrões PyQt6**
-   - Signals e Slots (conexões de eventos)
-   - Layouts para posicionamento responsivo
-   - QFont para estilos
-   - Separação em módulos
+### 2. **Separation of Responsibilities**
 
-## 🚀 Como Executar
+* Logic separated from the user interface
+* Easy to test and maintain
+* Reusable across different UIs
 
-### 1. Criar ambiente virtual (opcional mas recomendado)
+### 3. **PyQt6 Patterns**
+
+* Signals and Slots (event connections)
+* Layouts for responsive positioning
+* `QFont` for typography and styling
+* Separation into modules
+
+## How to Run
+
+### 1. Create a virtual environment (optional but recommended)
+
 ```bash
 cd pyqt6_app
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# ou
-venv\Scripts\activate     # Windows
 ```
 
-### 2. Instalar dependências
+Linux/macOS:
+
+```bash
+source venv/bin/activate
+```
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+### 2. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Executar a aplicação
+### 3. Run the application
+
 ```bash
 python main.py
-```
-
-## 📝 O que a Aplicação Faz
-
-A aplicação é um **Contador** simples com:
-- **Botão +1**: Incrementa o contador
-- **Botão -1**: Decrementa o contador
-- **Botão Reset**: Retorna o contador para 0
-- **Display grande**: Mostra o valor atual
-- **Histórico**: Mostra todos os valores registrados
-
-## 💡 Pontos-chave para Aprender
-
-### Classes PyQt6 Utilizadas:
-- `QMainWindow`: Janela principal com menu e barra de ferramentas
-- `QWidget`: Widget genérico para contêineres
-- `QVBoxLayout`/`QHBoxLayout`: Layouts verticais e horizontais
-- `QPushButton`: Botões
-- `QLabel`: Rótulos de texto
-- `QFont`: Tipografia
-
-### Padrão de Sinais e Slots:
-```python
-button.clicked.connect(self.on_button_clicked)
-```
-
-### Estrutura de Pacotes:
-- Cada módulo tem responsabilidade clara
-- `__init__.py` define o pacote
-- Imports relativos mantêm organização
-
-## 🔧 Expandindo o Projeto
-
-Ideias para expandir:
-1. Adicionar input numérico para incrementar/decrementar por valores personalizados
-2. Salvar histórico em arquivo
-3. Adicionar menu com opções
-4. Criar temas (estilos CSS)
-5. Adicionar testes unitários
-6. Implementar desfazer/refazer
-
-## 📚 Recursos Úteis
-
-- [Documentação PyQt6](https://www.riverbankcomputing.com/static/Docs/PyQt6/)
-- [Padrão MVC](https://pt.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
-- [Python Packaging](https://packaging.python.org/)
-# pyqt6-app-teste
+``` 
+ 
