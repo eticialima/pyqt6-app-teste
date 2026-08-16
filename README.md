@@ -2,6 +2,9 @@
 
 A simple educational PyQt6 application demonstrating the proper structure of a graphical application project.
 
+![Imagem](doc/preview.png)
+
+
 ## Project Structure
 
 ```text
@@ -61,6 +64,8 @@ Windows:
 ```bash
 venv\Scripts\activate
 ```
+
+On Windows, prefer a native Windows Python interpreter for this project. Avoid running it with Git Bash's `/usr/bin/python3` (MSYS Python), because PyQt6 wheels are built for standard Windows Python and may fail to import Qt DLLs there.
 
 ### 2. Install dependencies
 
